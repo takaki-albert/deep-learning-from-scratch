@@ -1,10 +1,11 @@
 # coding: utf-8
 import sys, os
+sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 from functools import reduce
 
 
-class Network:
+class TwoLayerNetwork:
 
     def __init__(self, definitions):
         self.all_layers = list(map(lambda x: x.create(), definitions))
