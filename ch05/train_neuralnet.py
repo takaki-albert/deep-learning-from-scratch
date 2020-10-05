@@ -4,13 +4,13 @@ sys.path.append(os.pardir)
 
 import numpy as np
 from dataset.mnist import load_mnist
-from two_layer_net import TwoLayerNetwork
+from two_layer_net import TwoLayerNet
 from layers import LayerDifinition
 
 # データの読み込み
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
-network = TwoLayerNetwork([
+network = TwoLayerNet([
     LayerDifinition('affine', {'input': 784, 'output': 50, 'weight_init_std': 0.01}),
     LayerDifinition('relu', {}),
     LayerDifinition('affine', {'input': 50, 'output': 10, 'weight_init_std': 0.01}),

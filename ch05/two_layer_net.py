@@ -5,7 +5,7 @@ import numpy as np
 from functools import reduce
 
 
-class TwoLayerNetwork:
+class TwoLayerNet:
 
     def __init__(self, definitions):
         self.all_layers = list(map(lambda x: x.create(), definitions))
